@@ -3,7 +3,7 @@ title: 'How Do I Begin'
 description: 'An introduction. Who I am, what this is, and why I started writing.'
 pubDate: 2026-03-29
 tags: ['personal']
-draft: true
+draft: false
 ---
 
 Oh great, another tech blog. Another dev talking about AI. Another guy who thinks he's changing the world with what he does. Why should I even begin to think about reading this?
