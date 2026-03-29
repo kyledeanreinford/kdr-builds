@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const posts = (await getCollection('blog'))
+	.filter((post) => !post.data.draft)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="intro">
+				<h1>{SITE_TITLE}</h1>
+				<p>{SITE_DESCRIPTION}</p>
+			</section>
+			<section class="posts">
+				{posts.map((post) => (
+					<article>
+						<a href={`/blog/${post.id}/`}>
+							<h3>{post.data.title}</h3>
+						</a>
+						<div class="meta">
+							<FormattedDate date={post.data.pubDate} />
+							{post.data.tags.length > 0 && (
+								<span class="tags">
+									{post.data.tags.map((tag) => (
+										<a href={`/tags/${tag}/`} class="tag">{tag}</a>
+									))}
+								</span>
+							)}
+						</div>
+					</article>
+				))}
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+	.intro {
+		margin-bottom: 3rem;
+
+		& h1 {
+			margin-bottom: 0.25rem;
+		}
+
+		& p {
+			color: var(--text-muted);
+			margin: 0;
+		}
+	}
+
+	.posts article {
+		margin-bottom: 1.5rem;
+
+		& a {
+			color: var(--text);
+
+			&:hover {
+				color: var(--accent);
+				text-decoration: none;
+			}
+		}
+
+		& h3 {
+			margin-bottom: 0.25rem;
+			font-size: 1.15rem;
+		}
+	}
+
+	.meta {
+		font-size: 0.85rem;
+		color: var(--text-muted);
+		display: flex;
+		gap: 0.75rem;
+		align-items: center;
+	}
+
+	.tags {
+		display: flex;
+		gap: 0.5rem;
+	}
+
+	.tag {
+		color: var(--accent);
+		font-size: 0.85rem;
+	}
+</style>

@@ -1,0 +1,29 @@
+---
+const today = new Date();
+---
+
+<footer>
+	<p>&copy; {today.getFullYear()} Kyle Dean Reinford</p>
+	<a href="/rss.xml">RSS</a>
+</footer>
+<style>
+	footer {
+		max-width: var(--max-width);
+		margin: 0 auto;
+		padding: 2rem 1.5rem;
+		border-top: 1px solid var(--border);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: var(--text-muted);
+		font-size: 0.85rem;
+
+		& a {
+			color: var(--text-muted);
+
+			&:hover {
+				color: var(--text);
+			}
+		}
+	}
+</style>

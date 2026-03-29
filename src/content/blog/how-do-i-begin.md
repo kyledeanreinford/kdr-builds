@@ -1,0 +1,13 @@
+---
+title: 'How Do I Begin'
+description: 'An introduction. Who I am, what this is, and why I started writing.'
+pubDate: 2026-03-29
+tags: ['personal']
+draft: true
+---
+
+Oh great, another tech blog. Another dev talking about AI. Another guy who thinks he's changing the world with what he does. Why should I even begin to think about reading this?
+
+How do I begin.
+
+My name's Kyle. I'm a generalist in many senses of the word. I've worked as an actor, a photographer, a waiter, a construction worker (I built my own home), a software developer. I've lived many lives over the years. I travel, support a family and am endlessly curious about how things work, why they work, and what's coming next. I deal with existential dread and the feeling of being incredibly small and inconsequential. I try to raise my kids to be curious and kind and well-balanced in a world that's increasingly becoming less so. I want to live in Europe. I bike most places on my electric cargo bike - many times with my kids in tow. I read a lot. Tim Robinson's humor hits me the right way. I used to write about music and I still want to sometimes. Music was a huge part of kdr-in-NYC, a 9-year period of my life in Brooklyn where I photographed musicians and prided myself for knowing bands before anyone else. I like optimizing. I'm interested in the mind-body connection and Stoicism and fasting. I've never done psychedelics but they sound fascinating. I have a great dad group of friends from my time in New York and another one here in Nashville that I have breakfast tacos with every Tuesday. I grew up in a Mennonite family in small town Indiana. Every week I bake bread and make pizza and have homemade yogurt. I work remote and go to a co-working space in the mornings - it fills my social cup as I'm currently in a situation where I'm not able to get out and about much. I miss the walkability of Brooklyn. We spent a summer in Montreal, which was a dream. Turns out my wife and kids might actually qualify as Canadian citizens by descent, suddenly. I'm working on building a lot of things - some software, some tinkering hardware. The software consultancy I've been with for just over 4 years, Initial Capacity, is based in Boulder, so I get to go there a few times a year. I have a home kubernetes cluster to host a ton of different services. We have two cats. I love running and hiking and sunshine on my face. Part of me pines for a large body of water nearby - there's something special about the ocean. Some day the last person to ever be born on earth will be born. I think cars were a mistake. I might not write software forever, but I'm enjoying it now.
