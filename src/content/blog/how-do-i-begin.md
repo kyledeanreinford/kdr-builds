@@ -1,7 +1,7 @@
 ---
 title: 'How Do I Begin'
 description: 'An introduction. Who I am, what this is, and why I started writing.'
-pubDate: 2026-03-29
+pubDate: 2026-03-28
 tags: ['personal']
 draft: false
 ---
