@@ -12,7 +12,7 @@ about my thoughts on cosmic insignificance? Or why I use IngressRoutes instead o
 
 I needed an outlet, and the NY Times said no.
 
-## Why Self-Host a Blog?
+## Why Self-Host A Blog?
 I'm a software dev with a homelab. I can throw a blog out there quickly and easily. I've used Substack for other
 writing, but for a variety of reasons this felt like something I wanted to roll myself.
 
