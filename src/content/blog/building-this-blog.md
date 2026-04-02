@@ -15,6 +15,7 @@ I needed an outlet, and the NY Times said no.
 ## Why Self-Host a Blog?
 I'm a software dev with a homelab. I can throw a blog out there quickly and easily. I've used Substack for other
 writing, but for a variety of reasons this felt like something I wanted to roll myself.
+
 The fun part about building it yourself is that you get to understand all the pieces of the puzzle - one of my favorite
 parts about building my own house. (Think you know the challenges of fullstack development? Try personally renovating a
 house from the 1940s while living in it and connecting all the electrical and plumbing while a pandemic is going on).
@@ -24,23 +25,27 @@ Plus when something breaks there's only one person you can blame...
 At home I run a k3s server. It's made up of three nodes - a couple of old Meerkats and a desktop build from 12 years
 ago. They're always on and run a variety of services for me - everything from home automation to a Minecraft world my
 son and I can build together.
+
 The reason for it in the first place? I was running a few services on an old Macbook and apps would fail or timeout or
 just struggle one way or another. It wasn't robust enough for what I needed it to do.
+
 Then along came a client that wanted to build a Kubernetes server with multiple environments and a bunch of automation.
 I knew some things about K8s, but not enough to really be able to sink my teeth in at the enterprise level, so I read
 some books (thanks [Nigel Poulton](https://www.nigelpoulton.com/)!) and spun one up at home. The amount I have learned about scalability and data sharing
 and networking has been invaluable - and my family benefits as well.
+
 The whole thing is served up on Cloudflare. Secure, but accessible, and easy to debug even when I'm away from home
 thanks to [Tailscale](https://tailscale.com/) - incredible product, if you've not heard of it.
 
 ## Why Astro
 I wanted something dead simple for this blog. I didn't want to do the thing where deciding on the tool was more work
 than actually implementing it. This is an extremely low-risk decision, so just getting something simple out there
-quickly and then iterating is really the way I like to work.
-Astro is a name I've heard a few times over the years - mostly when playing around with Cloudflare and their product
+quickly was key.
+
+Astro is a name I've heard a few times over the years - mostly when playing around with Cloudflare's product
 suite. It's fast, simple and there's no server-side runtime. I can just push a Markdown file and there's my blog.
 There were a few other options I explored, including Substack, Gatsby and Hugo, but Astro checked all of the boxes. They
-were recently acquired by Cloudflare as well. I generally have a very high opinion of the things Cloudflare does - if
+were recently acquired by Cloudflare as well. I generally have a very high opinion of the things CF does - if
 they like it, I probably want to use it.
 
 ## How I Actually Built It
@@ -50,6 +55,7 @@ made perfect sense to 1) come up with a plan in Claude.ai, 2) have it save the p
 Notion-like app) where 3) Claude Code could pick up the context and start writing ASAP. All in all it took me 18 prompts
 from idea -> deployed blog with all the k3s manifests, CI/CD in place as well as a mailing list and user tracking. And a
 few of those prompts were just clarification questions from my end.
+
 How does my code move from idea to living, deployed reality? I have a few levers in place for this to get it up quickly
 to k3s. I've got a Github Workflow so that every time I push a blog post, my tests run on CI, and if they pass they get
 pushed to a registry - I self-host Harbor for this. Github's UX around personal repo secrets is pretty annoying - you
