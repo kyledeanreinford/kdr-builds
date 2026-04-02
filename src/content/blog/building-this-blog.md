@@ -28,7 +28,7 @@ The reason for it in the first place? I was running a few services on an old Mac
 just struggle one way or another. It wasn't robust enough for what I needed it to do.
 Then along came a client that wanted to build a Kubernetes server with multiple environments and a bunch of automation.
 I knew some things about K8s, but not enough to really be able to sink my teeth in at the enterprise level, so I read
-some books (thanks Nigel Poulton!) and spun one up at home. The amount I have learned about scalability and data sharing
+some books (thanks [Nigel Poulton](https://www.nigelpoulton.com/)!) and spun one up at home. The amount I have learned about scalability and data sharing
 and networking has been invaluable - and my family benefits as well.
 The whole thing is served up on Cloudflare. Secure, but accessible, and easy to debug even when I'm away from home
 thanks to [Tailscale](https://tailscale.com/) - incredible product, if you've not heard of it.
