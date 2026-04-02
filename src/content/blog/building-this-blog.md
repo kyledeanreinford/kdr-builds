@@ -6,7 +6,7 @@ tags: [ 'claude', 'ai', 'tech', 'software', 'personal', 'k3s' ]
 draft: false
 ---
 
-Welcome to my new blog. If you're here, you probably know me. If not, [here's a recap](./how-do-i-begin.md) of who I
+Welcome to my new blog. If you're here, you probably know me. If not, [here's a recap](https://kyledeanreinford.com/blog/how-do-i-begin/) of who I
 am. This blog is part musings, part showcase, part just fun. Wanna hear about my Detroit style sourdough recipe? How
 about my thoughts on cosmic insignificance? Or why I use IngressRoutes instead of Ingress for my cluster? Done.
 
@@ -44,7 +44,7 @@ were recently acquired by Cloudflare as well. I generally have a very high opini
 they like it, I probably want to use it.
 
 ## How I Actually Built It
-I [used Claude to build](./falling-for-claude.md) this site. The idea of the blog itself came from
+I [used Claude to build](https://kyledeanreinford.com/blog/falling-for-claude/) this site. The idea of the blog itself came from
 conversations I've had with Claude about career progression and feeling like I need a creative outlet somewhere, so it
 made perfect sense to 1) come up with a plan in Claude.ai, 2) have it save the plan to AFFiNE (my self-hosted
 Notion-like app) where 3) Claude Code could pick up the context and start writing ASAP. All in all it took me 18 prompts
