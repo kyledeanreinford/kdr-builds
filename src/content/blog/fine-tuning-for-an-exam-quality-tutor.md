@@ -1,8 +1,8 @@
 ---
-title: 'Fine-Tuning for an Exam Quality Tutor'  
-description: 'I needed to study for an exam. I ended up fine-tuning a 27B model instead.'  
-pubDate: 2026-04-30  
-tags: ['ai', 'fine-tuning', 'claude certification', 'showcase', 'llm']  
+title: 'Fine-Tuning for an Exam Quality Tutor'
+description: 'I needed to study for an exam. I ended up fine-tuning a 27B model instead.'
+pubDate: 2026-04-30
+tags: [ 'ai', 'fine-tuning', 'claude certification', 'showcase', 'llm' ]
 draft: false
 ---
 
@@ -124,7 +124,9 @@ In fact, that's what happened. We kept training to 1000 iterations, but the numb
 validation loss were getting further and further apart. No bueno. So we grab the best one - which was 700 iterations -
 and fuse it to the model. `mlx_lm.fuse`. It's quick - just saving the 20mb or so of weights.
 
-> **Sidenote:** I didn't save my training logs the first few times around. I thought it would be easy enough to see them in tmux, but I'd suggest that you `tee` your lora logs to an output file, use the `--report-path` option, or just pipe through something that captures the iteration lines.
+> **Sidenote:** I didn't save my training logs the first few times around. I thought it would be easy enough to see them
+> in tmux, but I'd suggest that you `tee` your lora logs to an output file, use the `--report-path` option, or just pipe
+> through something that captures the iteration lines.
 
 So... now I have a fine-tuned model! It exists on the m2 in a models folder and I can try it out.
 
@@ -695,6 +697,7 @@ check. What is the most effective architectural change to optimize this workflow
   cannot reliably skip downstream steps based on upstream results.
 
 </details>
+
 
 The 32B question is fine - abstract product strategy, generic distractors that all read similarly, an explanation that
 mostly restates the answer. The 27B question lands on a specific failure mode (wasting compute on a 40% reject rate),
