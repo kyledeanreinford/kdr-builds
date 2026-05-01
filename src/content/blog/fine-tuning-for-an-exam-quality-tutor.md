@@ -1,10 +1,10 @@
-/---  
+---
 title: 'Fine-Tuning for an Exam Quality Tutor'  
 description: 'I needed to study for an exam. I ended up fine-tuning a 27B model instead.'  
 pubDate: 2026-04-30  
 tags: ['ai', 'fine-tuning', 'claude certification', 'showcase', 'llm']  
 draft: false
-\---
+---
 
 Recently I realized that I would like a better way to study for the GCP Cloud Architect Exam. There are some tools
 online and some paid courses, but nothing fits the way I work. I want feedback on why I'm wrong, I want sessions that
