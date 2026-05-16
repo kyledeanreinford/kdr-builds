@@ -56,7 +56,7 @@ for stubbed data so I could see the different situations based on how many event
 rainy days get an extra coat!), etc. This way of iterating through the design took each pass from a few minutes to a few
 seconds. Hugely helpful.
 
-![The Kidboard dashboard showing the day label, weather, and countdown](/images/kidboard/design.png)
+![The Kidboard dashboard showing the day label, weather, and countdown](/images/kidboard/design-v2.png)
 
 I think my favorite part is the "day label" at the top and the countdown at the bottom. This pulls Walker's Google
 calendar data, and I can now add labels for special events. Like yesterday was "Willy Wonka Closing Night!" And right
