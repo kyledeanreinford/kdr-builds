@@ -23,12 +23,17 @@ const tags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
 	<body>
 		<Header />
 		<main>
-			<h1>Tags</h1>
+			<header class="page-header">
+				<p class="kicker">Indexed by topic</p>
+				<h1>Tags</h1>
+			</header>
 			<ul class="tag-list">
 				{tags.map(([tag, count]) => (
 					<li>
-						<a href={`/tags/${tag}/`}>{tag}</a>
-						<span class="count">({count})</span>
+						<a href={`/tags/${tag}/`}>
+							<span class="name">{tag}</span>
+							<span class="count">{count}</span>
+						</a>
 					</li>
 				))}
 			</ul>
@@ -36,25 +41,57 @@ const tags = [...tagCounts.entries()].sort((a, b) => b[1] - a[1]);
 		<Footer />
 	</body>
 </html>
+
 <style>
-	h1 {
-		margin-bottom: 2rem;
+	main { max-width: var(--measure); }
+
+	.page-header {
+		margin-bottom: 2.5rem;
+		padding-bottom: 1.75rem;
+		border-bottom: 1px solid var(--rule);
+	}
+	.kicker {
+		font-family: var(--sans);
+		text-transform: uppercase;
+		letter-spacing: 0.18em;
+		font-size: 0.7rem;
+		color: var(--accent);
+		margin: 0 0 0.85rem;
+		font-weight: 500;
 	}
 
 	.tag-list {
 		list-style: none;
 		padding: 0;
+		margin: 0;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1rem;
+		gap: 0.6rem 0.75rem;
 	}
-
-	.tag-list li {
-		font-size: 1rem;
+	.tag-list a {
+		display: inline-flex;
+		align-items: baseline;
+		gap: 0.4rem;
+		padding: 0.45rem 0.85rem;
+		border: 1px solid var(--rule-soft);
+		border-radius: 999px;
+		text-decoration: none;
+		color: var(--text);
+		transition: border-color 0.15s, color 0.15s;
 	}
-
-	.count {
+	.tag-list a:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+	}
+	.tag-list .name {
+		font-family: var(--serif);
+		font-size: 0.95rem;
+	}
+	.tag-list .count {
+		font-family: var(--sans);
+		font-size: 0.7rem;
 		color: var(--text-muted);
-		font-size: 0.85rem;
+		letter-spacing: 0.05em;
 	}
+	.tag-list a:hover .count { color: var(--accent); }
 </style>

@@ -20,23 +20,30 @@ const { title, description, pubDate, updatedDate, tags } = Astro.props;
 		<main>
 			<article>
 				<header class="post-header">
+					<p class="kicker">From the workshop</p>
 					<h1>{title}</h1>
-					<div class="meta">
+					{description && <p class="dek">{description}</p>}
+					<p class="byline">
 						<FormattedDate date={pubDate} />
 						{updatedDate && (
 							<span class="updated">
-								(updated <FormattedDate date={updatedDate} />)
+								&nbsp;· Updated <FormattedDate date={updatedDate} />
 							</span>
 						)}
-					</div>
-					{tags.length > 0 && (
-						<div class="tags">
-							{tags.map((tag) => (
-								<a href={`/tags/${tag}/`} class="tag">{tag}</a>
-							))}
-						</div>
-					)}
-					<hr />
+						{tags.length > 0 && (
+							<>
+								<span class="byline-sep">·</span>
+								<span class="tags">
+									{tags.map((tag, i) => (
+										<>
+											<a href={`/tags/${tag}/`} class="tag">{tag}</a>
+											{i < tags.length - 1 && <span class="tag-sep">·</span>}
+										</>
+									))}
+								</span>
+							</>
+						)}
+					</p>
 				</header>
 				<div class="prose">
 					<slot />
@@ -47,39 +54,91 @@ const { title, description, pubDate, updatedDate, tags } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
 <style>
+	main {
+		max-width: var(--measure);
+	}
+
 	.post-header {
-		margin-bottom: 2rem;
-
-		& h1 {
-			margin-bottom: 0.5rem;
-		}
+		margin-bottom: 3rem;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid var(--rule);
 	}
-
-	.meta {
-		font-size: 0.9rem;
-		color: var(--text-muted);
-		margin-bottom: 0.5rem;
-	}
-
-	.updated {
-		font-style: italic;
-	}
-
-	.tags {
-		display: flex;
-		gap: 0.5rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.tag {
-		font-size: 0.85rem;
+	.kicker {
+		font-family: var(--sans);
+		text-transform: uppercase;
+		letter-spacing: 0.18em;
+		font-size: 0.7rem;
 		color: var(--accent);
+		margin: 0 0 1rem;
+		font-weight: 500;
 	}
+	.post-header h1 {
+		font-weight: 800;
+		font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+		line-height: 1.05;
+		letter-spacing: -0.028em;
+		margin: 0 0 1rem;
+	}
+	.dek {
+		font-size: 1.2rem;
+		font-style: italic;
+		color: var(--text-soft);
+		line-height: 1.5;
+		margin: 0 0 1.25rem;
+	}
+	.byline {
+		font-family: var(--sans);
+		font-size: 0.78rem;
+		color: var(--text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem;
+	}
+	.byline-sep, .tag-sep { color: var(--rule-soft); }
+	.tags {
+		display: inline-flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.tag {
+		color: var(--text-muted);
+		text-decoration: none;
+	}
+	.tag:hover { color: var(--accent); }
+	.updated { font-style: italic; text-transform: none; letter-spacing: 0; }
 
 	.prose {
-		& p {
-			margin-bottom: 1.5rem;
-		}
+		font-family: var(--serif);
+		font-size: 1.05rem;
+		line-height: 1.75;
+	}
+	.prose :global(h2) {
+		font-size: 1.6rem;
+		font-weight: 700;
+		margin-top: 2.5rem;
+	}
+	.prose :global(h3) {
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin-top: 2rem;
+	}
+	.prose :global(p) {
+		margin-bottom: 1.4rem;
+	}
+	.prose :global(a) {
+		color: var(--accent);
+		text-decoration: underline;
+		text-decoration-color: rgba(140, 58, 14, 0.35);
+		text-underline-offset: 0.2em;
+	}
+	.prose :global(a:hover) {
+		text-decoration-color: var(--accent);
 	}
 </style>

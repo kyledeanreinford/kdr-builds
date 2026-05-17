@@ -13,9 +13,35 @@ import { SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>404</h1>
-			<p>Page not found. <a href="/">Head home.</a></p>
+			<header class="page-header">
+				<p class="kicker">404</p>
+				<h1>Lost in the workshop.</h1>
+				<p class="dek">That page is missing. <a href="/">Head back home.</a></p>
+			</header>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main { max-width: var(--measure); }
+	.page-header {
+		padding-top: 2rem;
+	}
+	.kicker {
+		font-family: var(--sans);
+		text-transform: uppercase;
+		letter-spacing: 0.18em;
+		font-size: 0.7rem;
+		color: var(--accent);
+		margin: 0 0 0.85rem;
+		font-weight: 500;
+	}
+	.dek {
+		font-size: 1.2rem;
+		font-style: italic;
+		color: var(--text-soft);
+		margin-top: 1rem;
+	}
+	.dek a { color: var(--accent); }
+</style>

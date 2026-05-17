@@ -2,7 +2,8 @@
 ---
 
 <section class="signup">
-	<p>Get new posts in your inbox.</p>
+	<p class="kicker">Subscribe</p>
+	<p class="pitch">New pieces in your inbox when they're published.</p>
 	<form
 		action="https://buttondown.com/api/emails/embed-subscribe/kyledeanreinford"
 		method="post"
@@ -11,58 +12,62 @@
 		<button type="submit">Subscribe</button>
 	</form>
 </section>
+
 <style>
 	.signup {
-		border-top: 1px solid var(--border);
-		margin-top: 3rem;
+		border-top: 1px solid var(--rule);
+		margin-top: 4rem;
 		padding-top: 2rem;
-
-		& p {
-			margin-bottom: 0.75rem;
-			color: var(--text-muted);
-			font-size: 0.95rem;
-		}
-
-		& form {
-			display: flex;
-			gap: 0.5rem;
-		}
-
-		& input {
-			flex: 1;
-			padding: 0.5rem 0.75rem;
-			font-size: 0.95rem;
-			border: 1px solid var(--border);
-			border-radius: 4px;
-			background: var(--bg);
-			color: var(--text);
-			font-family: inherit;
-
-			&:focus {
-				outline: 2px solid var(--accent);
-				outline-offset: 1px;
-			}
-		}
-
-		& button {
-			padding: 0.5rem 1rem;
-			font-size: 0.95rem;
-			background: var(--accent);
-			color: white;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-			font-family: inherit;
-
-			&:hover {
-				opacity: 0.85;
-			}
-		}
 	}
+	.kicker {
+		font-family: var(--sans);
+		text-transform: uppercase;
+		letter-spacing: 0.18em;
+		font-size: 0.7rem;
+		color: var(--accent);
+		margin: 0 0 0.75rem;
+		font-weight: 500;
+	}
+	.pitch {
+		font-family: var(--serif);
+		font-style: italic;
+		font-size: 1.05rem;
+		color: var(--text-soft);
+		margin: 0 0 1.25rem;
+	}
+	form {
+		display: flex;
+		gap: 0.5rem;
+	}
+	input {
+		flex: 1;
+		padding: 0.6rem 0.85rem;
+		font-size: 0.95rem;
+		font-family: var(--serif);
+		border: 1px solid var(--rule-soft);
+		border-radius: 4px;
+		background: var(--bg);
+		color: var(--text);
+	}
+	input:focus {
+		outline: 2px solid var(--accent);
+		outline-offset: 1px;
+	}
+	button {
+		padding: 0.6rem 1.1rem;
+		font-family: var(--sans);
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+		background: var(--text);
+		color: var(--bg);
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	button:hover { background: var(--accent); }
 
 	@media (max-width: 480px) {
-		.signup form {
-			flex-direction: column;
-		}
+		form { flex-direction: column; }
 	}
 </style>
