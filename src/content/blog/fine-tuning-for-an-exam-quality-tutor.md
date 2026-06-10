@@ -11,8 +11,8 @@ online and some paid courses, but nothing fits the way I work. I want feedback o
 track my blind spots and I want to do it for free.
 
 At first I was doing a Claude Project with instructions around how to tutor me. One thing I really liked was that I
-could enter my train of thought - show your work, essentially. Then it's not just a correct/incorrect paradigm, it's a "
-you were close, but you missed it for this reason" type interaction - much better for learning and retention.
+could enter my train of thought - show your work, essentially. Then it's not just a correct/incorrect paradigm, it's a 
+"you were close, but you missed it for this reason" type interaction - much better for learning and retention.
 
 My first attempt was a CLI tutor using docs in ChromaDB and a local LLM generating questions on demand. It was a bit too
 slow on my laptop and the results weren't particularly great either.
